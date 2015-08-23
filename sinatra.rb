@@ -5,7 +5,7 @@ get '/' do
   send_file File.join(settings.public_folder, "index.html")
 end
 
-get "/contact" do
+post "/contact" do
 
 Pony.mail({
   :to => 'damianirarrazavalb@gmail.com',
@@ -24,12 +24,11 @@ Pony.mail({
   }
 })
 
-  file_blank = open("contact_list.txt", "w")
-  inputs = params[:name], params[:from], params[:phone], params[:message] 
+  file_blank = open("contact_list.txt", "a")
+  inputs = params[:name], params[:from], params[:phone], params[:message]
   file_blank.write(inputs)
 
 	redirect to("/")
 
 end
-
 
