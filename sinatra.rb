@@ -18,7 +18,7 @@ Pony.mail({
     :port                 => '587',
     :enable_starttls_auto => true,
     :user_name            => 'damianirarrazavalb@gmail.com',
-    :password             => 'wzmrwnxdmcuestvf',
+    :password             => 'passwordgmailapp',
     :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
     :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
   }
